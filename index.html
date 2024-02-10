@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="clock">
+            <div class="inside">
+                <div class="days-of-the-week">
+                    <span id="sun" class="active">SUN</span>
+                    <span id="mon">MON</span>
+                    <span id="tue">TUE</span>
+                    <span id="wed">WED</span>
+                    <span id="thu">THU</span>
+                    <span id="fri">FRI</span>
+                    <span id="sat">SAT</span>
+                </div>
+
+                <br>
+
+                <div class="time">
+                    <span id="hours">01</span>
+                    :
+                    <span id="min">01</span>
+                    :
+                    <span id="sec">01</span>
+                    <span class="ampm">AM</span>
+                </div>
+                <div class="date">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar2-event-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                        </svg>
+                    </span>
+                    <span id="year">2023</span>
+                    <span id="month">JAN</span>
+                    <span id="day">01</span>
+                </div>
+
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
