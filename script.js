@@ -1,11 +1,11 @@
 const daysOfWeek = [
-    'mon', 'tue' , 'wed', 'thu', 'fri', 'sat', 'sun'
+    'sun', 'mon', 'tue' , 'wed', 'thu', 'fri', 'sat', 'sun'
 ];
 
 const months = [
-    'JAN', 'FEB', 'APR', 'MAY',
+    'JAN', 'FEB', 'MAR', 'APR', 'MAY',
     'JUN', 'JUL', 'AUG', 'SPT',
-    'OCT', 'NOV', 'DEC', 'MAR'
+    'OCT', 'NOV', 'DEC'
 ];
 
 const $ = (id) => document.getElementById(id);
@@ -18,23 +18,25 @@ function clock (){
     const h = today.getHours();
     const m = today.getMinutes();
     const s = today.getSeconds();
-    const ampm = h < 11 ? 'AM' : 'PM';
+    const ampm = h <= 11 ? 'AM' : 'PM';
     const day = today.getDay();
     const date = today.getDate();
     const month = today.getMonth();
     const year = today.getFullYear();
 
-    $('hours').innerHTML = zeroPadding(h);
-    $('hours').innerHTML = zeroPadding(h);
-    $('sec').innerHTML = zeroPadding(s);
-    $('ampm').innerHTML = ampm;
-    $(daysOfWeek.at(day - 1))
-        .classList.remove('active');
-    $(daysOfWeek[day])
-    classList.add('active');
-    $('year').innerHTML = year;
+    $('year').innerHTML = zeroPadding(year);
     $('month').innerHTML = months[month];
     $('day').innerHTML = zeroPadding(date);
+
+    $('hours').innerHTML = zeroPadding(h);
+    $('min').innerHTML = zeroPadding(m);
+    $('sec').innerHTML = zeroPadding(s);
+    $('ampm').innerHTML = ampm;
+    $(daysOfWeek[day])
+    .classList.remove('active');
+
+    // console.log(day, today.getDay());
+    $(daysOfWeek[day]).classList.add('active');
 }
 
 setInterval(clock, 400);
